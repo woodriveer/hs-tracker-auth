@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "jwt.client-id",
+      "type": "java.lang.String",
+      "description": "Client for jwt authentication"
+    },
+    {
+      "name": "jwt.client-secret",
+      "type": "java.lang.String",
+      "description": "Secret for jwt authentication"
+    },
+    {
+      "name": "jwt.access-token-validity-seconds",
+      "type": "java.lang.String",
+      "description": "Time to expire token in seconds"
+    },
+    {
+      "name": "jwt.refresh-token-validity-seconds",
+      "type": "java.lang.String",
+      "description": "Time to refresh token in seconds"
+    }
+  ]
+}
