@@ -7,19 +7,19 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer
 
-@Configuration
-@EnableResourceServer
-class ResourceServerConfiguration: ResourceServerConfigurerAdapter() {
-    override fun configure(resources: ResourceServerSecurityConfigurer) {
-        resources.resourceId("api")
-    }
-
-    override fun configure(http: HttpSecurity) {
-        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            .and()
-            .antMatcher("/api/**")
-            .authorizeRequests()
-            .antMatchers("/api/signin**").permitAll()
-            .anyRequest().authenticated()
-    }
-}
+//@Configuration
+//@EnableResourceServer
+//class ResourceServerConfiguration: ResourceServerConfigurerAdapter() {
+//    override fun configure(resources: ResourceServerSecurityConfigurer) {
+//        resources.resourceId("api")
+//    }
+//
+//    override fun configure(http: HttpSecurity) {
+//        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//            .and()
+//            .antMatcher("/api/**")
+//            .authorizeRequests()
+//            .antMatchers("/api/signin**").permitAll()
+//            .anyRequest().authenticated()
+//    }
+//}
