@@ -6,11 +6,13 @@ import br.com.woodriver.hstrackerauth.mapper.toDomain
 import br.com.woodriver.hstrackerauth.shared.logger
 import br.com.woodriver.hstrackerauth.usecase.UserUseCase
 import org.springframework.dao.DataIntegrityViolationException
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
+@CrossOrigin("http://localhost:4200")
 class UserController(val userUseCase: UserUseCase) {
 
     val logger = logger<UserController>()
